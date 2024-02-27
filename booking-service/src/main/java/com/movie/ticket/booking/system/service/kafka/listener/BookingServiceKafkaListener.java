@@ -18,7 +18,7 @@ public class BookingServiceKafkaListener {
     private final BookingService bookingService;
     private final ObjectMapper objectMapper;
 
-    @KafkaListener(topics = "payment-response", groupId = "paymentresponse-booking")
+    @KafkaListener(topics = "payment-response", groupId = "payment-response-booking")
     public void receiveFromPaymentResponseTopic(String bookingDTOJson) {
         log.info("Received confirmation on booking details from payment-response kafka topic");
         try {

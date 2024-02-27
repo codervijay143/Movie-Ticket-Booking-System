@@ -10,12 +10,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-gateway" />
         <module name="payment-service" />
-        <module name="movie-services-registry" />
-        <module name="notification-service" />
-        <module name="commons" />
         <module name="booking-service" />
+        <module name="api-gateway" />
+        <module name="movie-service" />
+        <module name="user-service" />
+        <module name="commons" />
+        <module name="notification-service" />
+        <module name="movie-services-registry" />
       </profile>
     </annotationProcessing>
   </component>
@@ -24,10 +26,12 @@
       <module name="api-gateway" options="-parameters" />
       <module name="booking-service" options="-parameters" />
       <module name="commons" options="-parameters" />
+      <module name="movie-service" options="-parameters" />
       <module name="movie-services-registry" options="-parameters" />
       <module name="movie-ticket-booking-system" options="-parameters" />
       <module name="notification-service" options="-parameters" />
       <module name="payment-service" options="-parameters" />
+      <module name="user-service" options="-parameters" />
     </option>
   </component>
 </project>

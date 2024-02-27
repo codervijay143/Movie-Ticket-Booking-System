@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.UUID;
@@ -27,6 +28,7 @@ public class BookingEntity {
     private String userId;
     @Column(name = "movie_id")
     private Integer movieId;
+    private String transactionId;
     @ElementCollection
     private List<String> seatsBooked;
     @Column(name = "show_date")
@@ -37,4 +39,6 @@ public class BookingEntity {
     private BookingStatus bookingStatus;
     @Column(name = "booking_amount")
     private Double bookingAmount;
+    private LocalDateTime createdDateTime;
+    private String movieName;
 }

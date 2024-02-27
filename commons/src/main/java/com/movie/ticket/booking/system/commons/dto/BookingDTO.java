@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.UUID;
@@ -25,15 +26,17 @@ public class BookingDTO {
     private String userId;
     @NotNull(message = "movie id is mandatory")
     private Integer movieId;
+    @NotBlank(message = "transactionId is mandatory")
+    private String transactionId;
     @NotNull(message = "user must have booked at least 1 seat")
     private List<String> seatsBooked;
-    @NotNull(message = "show date Is mandatory")
     private LocalDate showDate;
-    @NotNull(message = "show time Is mandatory")
     private LocalTime showTime;
     private BookingStatus bookingStatus;
     @NotNull(message = "booking amount is mandatory")
     @Positive(message = "amount must be greater than zero")
     private Double bookingAmount;
+    private LocalDateTime createdDateTime;
+    private String movieName;
 
 }

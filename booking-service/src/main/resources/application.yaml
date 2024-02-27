@@ -1,12 +1,12 @@
 server:
-  port: ${SERVER_PORT:8080}
+  port: 8080
 spring:
   application:
-    name: ${APPLICATION_NAME:booking-service}
+    name: booking-service
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:bookings?createDatabaseIfNotExist=true}
-    username: ${MYSQL_USER:root}
-    password: ${MYSQL_PASSWORD:Coder@9505}
+    username: root
+    password: Coder@9505
   jpa:
     hibernate:
       ddl-auto: update
